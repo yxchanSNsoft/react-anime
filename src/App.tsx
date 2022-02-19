@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
-// import Footer from "./footer";
 import { debounce } from "lodash"
 import AnimeDetails from "./animeDetails";
 import {Navigate, useRoutes} from 'react-router-dom';
@@ -19,7 +18,6 @@ function App() {
     type : "", 
     rated : "",
   })
-  // const [pages, setPages] = useState(0)
   const results_per_page = 14;
 
   /*
@@ -28,35 +26,6 @@ function App() {
   * @results_per_page : how many results to display per page
   */
 
-  // const mainRoutes = {
-  //   path: '/',
-  //   element: '',
-  //   children: [
-  //     {path: '/', element: <App />},
-  //     {path: 'animedetails', element: <AnimeDetails />},
-  //     // {path: 'account', element: <Navigate to='/account/list' />},
-  //   ],
-  // };
-
-  // const routing = useRoutes([mainRoutes]);
-
-  //https://api.jikan.moe/v3/search/anime?q=naruto
-
-  // React.useEffect(() => {
-  //   console.log('Mounted');
-  //   async function request() {
-  //     let result = await fetch("https://api.jikan.moe/v3/anime/1/episodes").then((res) => res.json()).then(res2=>{
-  //       console.log(res2)
-  //       setAnime(res2.episodes)
-  //       setPages(res2.episodes.length/results_per_page)
-  //     })
-  //   }
-  //   request()
-    
-  //   return () => {
-  //     console.log('Will unmount');
-  //   };
-  // }, []); 
 
   async function request(search : string) {
     let result = await fetch("https://api.jikan.moe/v3/search/anime?q=" + search).then((res) => res.json()).then(res2=>{
@@ -73,10 +42,6 @@ function App() {
     setShowAnime(true)
 
   }
-
-  // const onSearch = useCallback(() => {
-      
-  // }, []);
 
   function onSearch(text : string) {
     console.log(text)
