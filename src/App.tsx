@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import { debounce } from "lodash"
-import AnimeDetails from "./animeDetails";
 import {Navigate, useRoutes} from 'react-router-dom';
 
 function App() {
