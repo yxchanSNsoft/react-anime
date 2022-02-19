@@ -1,5 +1,5 @@
-#Simple react app for one of my interviews
+# Simple react app for one of my interviews
 
-##npm install, then npm start
+## npm install, then npm start
 
 ### stack : typescript + react
