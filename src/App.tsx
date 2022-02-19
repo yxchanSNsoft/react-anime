@@ -81,7 +81,6 @@ function App() {
         }
       </div>
       <div className="pagination-container">
-        {/* <Footer results_per_page={results_per_page} page={page} pages={pages} /> */}
         {
           animes && animes.length > 0 && animes.map((value, index)=>{
             if (index % results_per_page == 0) {
